@@ -7,6 +7,6 @@ namespace Test.Operation
 {
     public interface IOperation
     {
-        double calc(double field1, double field2);
+        decimal calc(decimal field1, decimal field2);
     }
 }

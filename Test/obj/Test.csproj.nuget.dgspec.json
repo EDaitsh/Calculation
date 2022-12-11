@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ed250178\\OneDrive - NCR Corporation\\Desktop\\פרטי\\עבודה\\מבחן בית\\Test\\Test.csproj": {}
+    "C:\\Users\\ed250178\\OneDrive - NCR Corporation\\Desktop\\פרטי\\עבודה\\מבחן בית\\Calculation\\Test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ed250178\\OneDrive - NCR Corporation\\Desktop\\פרטי\\עבודה\\מבחן בית\\Test\\Test.csproj": {
+    "C:\\Users\\ed250178\\OneDrive - NCR Corporation\\Desktop\\פרטי\\עבודה\\מבחן בית\\Calculation\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ed250178\\OneDrive - NCR Corporation\\Desktop\\פרטי\\עבודה\\מבחן בית\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\ed250178\\OneDrive - NCR Corporation\\Desktop\\פרטי\\עבודה\\מבחן בית\\Calculation\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\ed250178\\OneDrive - NCR Corporation\\Desktop\\פרטי\\עבודה\\מבחן בית\\Test\\Test.csproj",
+        "projectPath": "C:\\Users\\ed250178\\OneDrive - NCR Corporation\\Desktop\\פרטי\\עבודה\\מבחן בית\\Calculation\\Test\\Test.csproj",
         "packagesPath": "C:\\Users\\ed250178\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ed250178\\OneDrive - NCR Corporation\\Desktop\\פרטי\\עבודה\\מבחן בית\\Test\\obj\\",
+        "outputPath": "C:\\Users\\ed250178\\OneDrive - NCR Corporation\\Desktop\\פרטי\\עבודה\\מבחן בית\\Calculation\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ed250178\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,6 +38,20 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.31, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"

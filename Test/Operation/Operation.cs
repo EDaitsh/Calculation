@@ -7,7 +7,7 @@ namespace Test.Operation
 {
     public class Add : IOperation
     {
-        public double calc(double field1, double field2)
+        public decimal calc(decimal field1, decimal field2)
         {
             return field1 + field2;
         }
@@ -15,7 +15,7 @@ namespace Test.Operation
 
     public class Subtruct : IOperation
     {
-        public double calc(double field1, double field2)
+        public decimal calc(decimal field1, decimal field2)
         {
             return field1 - field2;
         }
@@ -23,7 +23,7 @@ namespace Test.Operation
 
     public class Multiply : IOperation
     {
-        public double calc(double field1, double field2)
+        public decimal calc(decimal field1, decimal field2)
         {
             return field1 * field2;
         }
@@ -31,7 +31,7 @@ namespace Test.Operation
 
     public class Devide : IOperation
     {
-        public double calc(double field1, double field2)
+        public decimal calc(decimal field1, decimal field2)
         {
 
             if (field2 == 0)

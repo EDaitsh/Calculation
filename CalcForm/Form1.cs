@@ -22,10 +22,22 @@ namespace CalcForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            result.Text = api.Calc(new CalcInfo { 
+
+            var res = api.Calc(new CalcInfo
+            {
                 Field1 = Convert.ToDouble(field1.Text),
-                Field2 = Convert.ToDouble(field2.Text), 
-                Operation = (int)operations.SelectedValue }).ToString();
+                Field2 = Convert.ToDouble(field2.Text),
+                Operation = (int)operations.SelectedValue
+            });
+
+            result.Text = ($"Result: {res.Restult}" + Environment.NewLine +
+                $"3 recent actions: " + Environment.NewLine); 
+                res.CalculationHistories.ForEach(
+                    ch => result.Text += ch.ToString() 
+                    + Environment.NewLine);
+            result.Text += ($"CountOperationType: {res.CountInCurrentMonth}"
+                + Environment.NewLine +
+                $"MinValue: {res.MinCalc}, MaxValue: {res.MaxCalc}, AvgValue: {res.AvgCalc}"); 
         }
 
 

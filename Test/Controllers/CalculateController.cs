@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Test.Context;
 using Test.Models;
 using Test.Operation;
 using static Test.Operation.IOperationFactory;
@@ -14,12 +15,17 @@ namespace Test.Controllers
     [ApiController]
     public class CalculateController : ControllerBase
     {
+        private Calculation _calculation;
         private IOperatinFactory operationFactory = new IOperatinFactory();
+
+        public CalculateController(CalculationContext calculationContex )
+        {
+            _calculation = new Calculation(calculationContex);
+        }
         // GET: api/Calculate
         [HttpGet]
         public Dictionary<int, string> GetOparation()
         {
-            //return Enum.GetNames(typeof(OperationType)).ToList();
             return Enum.GetValues(typeof(OperationType))
                            .Cast<OperationType>()
                            .ToDictionary(t => (int)t, t => t.ToString());
@@ -27,12 +33,9 @@ namespace Test.Controllers
 
         // POST: api/Calculate
         [HttpPost]
-        public double Calc([FromBody] CalculateInfo info)
+        public ResultCalculation Calc([FromBody] CalculateInfo info)
         {
-            IOperation operation = operationFactory.GetOperation((OperationType)info.Operation);
-            if (operation != null)
-                return operation.calc(info.Field1, info.Field2);
-            else return 0;
+            return _calculation.Calc(info);
         }
     }
 }

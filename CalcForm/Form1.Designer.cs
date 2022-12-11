@@ -76,9 +76,9 @@
             // 
             // result
             // 
-            this.result.Location = new System.Drawing.Point(554, 102);
+            this.result.Location = new System.Drawing.Point(156, 124);
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(79, 19);
+            this.result.Size = new System.Drawing.Size(382, 132);
             this.result.TabIndex = 5;
             // 
             // Form1

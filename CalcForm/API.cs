@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using CalcForm.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +23,11 @@ namespace CalcForm
                     new MediaTypeWithQualityHeaderValue("application/json"));
 
             }
-        public  double Calc(CalcInfo info)
+        public  ResultCalculation Calc(CalcInfo info)
         {
             var response =  client.PostAsJsonAsync("api/Calculate", info).Result;
             var jsonString = response.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject<double>(jsonString.Result);
+            return JsonConvert.DeserializeObject<ResultCalculation>(jsonString.Result);
         }
         public  Dictionary<int, string> GetOperations()
         {
