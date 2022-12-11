@@ -1,0 +1,21 @@
+USE [CalcDB]
+GO
+
+/****** Object:  Table [dbo].[OperationType]    Script Date: 2022-12-12 1:41:15 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[OperationType](
+	[Id] [int] NOT NULL,
+	[decs] [nchar](10) NOT NULL,
+ CONSTRAINT [PK_OperationType] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
